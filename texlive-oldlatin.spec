@@ -1,3 +1,9 @@
+# revision 17932
+# category Package
+# catalog-ctan /fonts/gothic/oldlatin
+# catalog-date 2010-04-29 07:59:03 +0200
+# catalog-license lppl
+# catalog-version 1.00
 Name:		texlive-oldlatin
 Version:	1.00
 Release:	1
@@ -144,6 +150,7 @@ generate "long s" which was used in old text.
 %doc %{_texmfdistdir}/doc/fonts/oldlatin/test_ol_ss.tex
 %doc %{_texmfdistdir}/doc/fonts/oldlatin/test_ol_tt.pdf
 %doc %{_texmfdistdir}/doc/fonts/oldlatin/test_ol_tt.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -154,3 +161,5 @@ generate "long s" which was used in old text.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
