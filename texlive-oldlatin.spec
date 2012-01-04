@@ -6,7 +6,7 @@
 # catalog-version 1.00
 Name:		texlive-oldlatin
 Version:	1.00
-Release:	1
+Release:	2
 Summary:	Compute Modern like font with long s
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gothic/oldlatin
