@@ -1,18 +1,12 @@
-# revision 17932
-# category Package
-# catalog-ctan /fonts/gothic/oldlatin
-# catalog-date 2010-04-29 07:59:03 +0200
-# catalog-license lppl
-# catalog-version 1.00
 Name:		texlive-oldlatin
-Version:	1.00
-Release:	11
+Version:	17932
+Release:	1
 Summary:	Compute Modern like font with long s
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gothic/oldlatin
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oldlatin.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oldlatin.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oldlatin.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oldlatin.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ Metafont sources modified from Computer Modern in order to
 generate "long s" which was used in old text.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -144,24 +138,10 @@ generate "long s" which was used in old text.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.00-2
-+ Revision: 754508
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.00-1
-+ Revision: 719157
-- texlive-oldlatin
-- texlive-oldlatin
-- texlive-oldlatin
-- texlive-oldlatin
-
