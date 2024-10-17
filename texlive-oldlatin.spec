@@ -3,7 +3,7 @@ Version:	17932
 Release:	2
 Summary:	Compute Modern like font with long s
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/gothic/oldlatin
+URL:		https://www.ctan.org/tex-archive/fonts/gothic/oldlatin
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oldlatin.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/oldlatin.doc.r%{version}.tar.xz
